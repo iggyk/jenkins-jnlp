@@ -48,7 +48,7 @@ RUN add-apt-repository \
 
 RUN apt-get update
 
-ARG DOCKER_VERSION=1.13.0-0~debian-jessie
+ARG DOCKER_VERSION=1.13.1-0~debian-jessie
 
 RUN apt-get -y install docker-engine=${DOCKER_VERSION}
 
