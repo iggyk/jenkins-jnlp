@@ -39,8 +39,8 @@ RUN apt-get -y install docker-engine=${DOCKER_VERSION}
 
 # .NET Core #
 
-# dotnet-dev-debian-x64.1.0.0-preview2-1-003177
-ARG NETCORE_URL=https://go.microsoft.com/fwlink/?LinkID=835021
+# dotnet-dev-debian-x64.1.0.0-rc3-004530
+ARG NETCORE_URL=https://go.microsoft.com/fwlink/?linkid=839630
 
 RUN apt-get update && apt-get install curl libunwind8 gettext -y
 RUN curl -sSL -o /tmp/dotnet.tar.gz ${NETCORE_URL}
