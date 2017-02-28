@@ -47,6 +47,9 @@ RUN curl -sSL -o /tmp/dotnet.tar.gz ${NETCORE_URL}
 RUN mkdir -p /opt/dotnet && tar zxf /tmp/dotnet.tar.gz -C /opt/dotnet
 RUN ln -s /opt/dotnet/dotnet /usr/local/bin
 
+#workaround to initialize dotnet for the first time
+RUN dotnet new
+
 # end .NET Core #
 
 COPY start-docker-and-slave /usr/local/bin/start-docker-and-slave
